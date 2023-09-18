@@ -1,0 +1,128 @@
+body, html, #navigation, #container, #inhalt {margin:0;padding:0;}
+
+a:link, a:visited {text-decoration:none; color:#5c7788;}
+
+body,html {font-family: Sans-Serif; background-color:white;text-align:center;}
+
+#container {
+position:relativ;
+max-width:1600px;
+text-align:left;
+margin:0 auto; 
+margin-top:20px;
+margin-bottom:80px;
+padding-left:10px;
+display:table;
+}
+
+#inhalt {
+background-color:#ffffff;
+padding-right:20px;
+text-align:justify;
+}
+
+#picture {min-width:250px; padding-bottom:10px;}
+
+#picture img{width:200px;height:auto;}
+
+header {
+background: #ffffff url("http://www.itec.aau.at/~roland/siegel-aau-opac12.png") no-repeat;
+background-position:25% -170px;
+background-size: 700px; -ms-background-size: 700px; -o-background-size: 700px; -moz-background-size: 700px; -webkit-background-size: 700px;
+box-shadow: 0px 2px 0px #7ea4cb;
+color:#5c7788;
+height:80px;
+text-align:left;
+font-size: 1.5em;
+padding-left: 20px;
+padding-right: 20px;
+vertical-align: middle;
+line-height: 80px;
+}
+
+nav {
+z-index:1000;
+position:fixed;
+top:0px;
+right:20px;
+width:200px;
+height:50px;
+color: #ffffff;
+}
+
+nav ul, nav li, nav a:link, nav a:visited{color: #ffffff; text-decoration: none;}
+
+nav li {display: inline-block; padding-left: 15px;}
+
+nav a:hover {color:#f29300;}
+
+h2 {color:#9b9b9b; font-size:1.5em;}
+
+h3 {color:#9b9b9b; font-size:1.2em;}
+
+li{padding-top:5px;}
+
+footer{
+box-shadow: 0px -1px 0px #9b9b9b;
+position:relative;
+width:100%;
+color:#5c7788;
+background: #ffffff url("http://www.itec.aau.at/~roland/siegel-aau-opac12.png") no-repeat;
+background-position:25% -150px;
+background-size: 700px; -ms-background-size: 700px; -o-background-size: 700px; -moz-background-size: 700px; -webkit-background-size: 700px;
+text-align:left;
+bottom:0px;
+min-height:160px;
+vertical-align: middle;
+line-height: 25px;
+}
+
+footer a:link, footer a:visited, footer a:hover{color:#5c7788;}
+
+#information h1{font-size:1.1em;padding-top:5px;}
+
+@media all and (min-width : 800px) {
+	#inhalt {display:table-cell; vertical-align:top;}
+	#picture {display:table-cell; vertical-align: top;}
+	#picture img{width:200px;height:auto;}
+}
+
+@media all and (min-width : 451px) {
+	#information{
+	font-size:0.8em;
+	text-align:left;
+	padding-left:20px;
+	padding-top:0px;
+	line-height:1.3;
+	float:left;
+	width:50%;
+	}
+	#logo{
+	padding-left:30px;
+	padding-right:20px;
+	padding-top:20px;
+	text-align:right;
+	}
+	#logo img{width:200px;height:auto;}
+}
+
+@media all and (max-width : 450px) {
+	#information{
+	font-size:0.8em;
+	text-align:left;
+	padding-left:5%;
+	padding-top:0px;
+	line-height:1.3;
+	float:left;
+	min-width:95%;
+	min-height:130px;
+	}
+	#logo{
+	padding-left:5%;
+	padding-top:10%;
+	padding-bottom:5%;
+	text-align:left;
+	min-width:95%;
+	}
+	#logo img{width:90%;height:auto;}
+}
