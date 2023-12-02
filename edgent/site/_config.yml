@@ -1,0 +1,129 @@
+# --------------------------------------------------------------------------#
+# Licensed to the Apache Software Foundation (ASF) under one or more        #
+# contributor license agreements.  See the NOTICE file distributed with     #
+# this work for additional information regarding copyright ownership.       #
+# The ASF licenses this file to you under the Apache License, Version 2.0   #
+# (the "License"); you may not use this file except in compliance with      #
+# the License.  You may obtain a copy of the License at                     #
+#                                                                           #
+# http://www.apache.org/licenses/LICENSE-2.0                                #
+#                                                                           #
+# Unless required by applicable law or agreed to in writing, software       #
+# distributed under the License is distributed on an "AS IS" BASIS,         #
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  #
+# See the License for the specific language governing permissions and       #
+# limitations under the License.                                            #
+# --------------------------------------------------------------------------#
+
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+project: mydoc_designers
+audience: designers
+product: doc
+platform: all
+version: all
+output: web
+destination: ../_site
+topnav_title: Apache Edgent Documentation
+homepage_title: Apache Edgent Documentation
+site_title: Apache Edgent Documentation
+project_folder: docs
+company_name: Apache Edgent
+footer_image_location: ../../common_images/company_logo.png
+github_editme_path: apache/incubator-edgent-website/blob/master/site
+disqus_shortname: idrbwjekyll
+# variables
+
+sidebar_tagline: Edgent
+sidebar_version: Version 1.2.0-incubating
+theme_file: theme-blue.css
+
+# the algolia entries here are experimental only.
+
+#gems:
+#  - algoliasearch-jekyll
+#algolia:
+#  application_id: 'HXUBJERYYB'
+#  index_name:     'documentation_theme_jekyll_designers'
+port: 4009
+
+exclude:
+  - _site
+  - _drafts
+  - configs/
+  - doc/mydoc_writers*
+# these settings should work, but they don't seem to apply the right highlighting
+
+#highlighter: rouge
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  hard_wrap: false
+#  syntax_highlighter: rouge
+
+
+
+collections:
+  tooltips:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true
+
+url: http://edgent.incubator.apache.org
+baseurl:
+title: Apache Edgent
+description: Apache Edgent is an open source community for accelerating analytics at the edge.
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: redcarpet
+permalink: pygments
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: twitter
+    url: https://twitter.com/ApacheEdgent
+  - title: github
+    url: https://github.com/apache/incubator-edgent
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/ask?tags=apache-edgent
+
+detach:  false
+port:    4000
+host:    127.0.0.1
+
+#Base URLs
+sourcerepourl: https://github.com/apache/incubator-edgent
+downloadsurl: /docs/downloads
+projurl: /
+docsurl: /javadoc/latest
