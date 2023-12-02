@@ -1,0 +1,208 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+/docs/quarks_index:
+  title: "Introduction"
+  url: "../docs/quarks_index.html"
+  link: "<a href='../docs/quarks_index.html'>Introduction</a>"
+
+
+ 
+/docs/faq:
+  title: "FAQ"
+  url: "../docs/faq.html"
+  link: "<a href='../docs/faq.html'>FAQ</a>"
+
+
+
+
+ 
+/docs/quarks-getting-started:
+  title: "Getting started guide"
+  url: "../docs/quarks-getting-started.html"
+  link: "<a href='../docs/quarks-getting-started.html'>Getting started guide</a>"
+
+
+ 
+/docs/common-quarks-operations:
+  title: "Common operations"
+  url: "../docs/common-quarks-operations.html"
+  link: "<a href='../docs/common-quarks-operations.html'>Common operations</a>"
+
+
+
+
+ 
+/recipes/recipe_hello_quarks:
+  title: "Hello Quarks!"
+  url: "../recipes/recipe_hello_quarks.html"
+  link: "<a href='../recipes/recipe_hello_quarks.html'>Hello Quarks!</a>"
+
+
+ 
+/recipes/recipe_source_function:
+  title: "Writing a source function"
+  url: "../recipes/recipe_source_function.html"
+  link: "<a href='../recipes/recipe_source_function.html'>Writing a source function</a>"
+
+
+ 
+/recipes/recipe_value_out_of_range:
+  title: "Detecting a sensor value out of expected range"
+  url: "../recipes/recipe_value_out_of_range.html"
+  link: "<a href='../recipes/recipe_value_out_of_range.html'>Detecting a sensor value out of expected range</a>"
+
+
+ 
+/recipes/recipe_different_processing_against_stream:
+  title: "Applying different processing against a single stream"
+  url: "../recipes/recipe_different_processing_against_stream.html"
+  link: "<a href='../recipes/recipe_different_processing_against_stream.html'>Applying different processing against a single stream</a>"
+
+
+ 
+/recipes/recipe_combining_streams_processing_results:
+  title: "Splitting a stream to apply different processing and combining the results into a single stream"
+  url: "../recipes/recipe_combining_streams_processing_results.html"
+  link: "<a href='../recipes/recipe_combining_streams_processing_results.html'>Splitting a stream to apply different processing and combining the results into a single stream</a>"
+
+
+ 
+/recipes/recipe_external_filter_range:
+  title: "Using an external configuration file for filter ranges"
+  url: "../recipes/recipe_external_filter_range.html"
+  link: "<a href='../recipes/recipe_external_filter_range.html'>Using an external configuration file for filter ranges</a>"
+
+
+ 
+/recipes/recipe_adaptable_filter_range:
+  title: "Changing a filter's range"
+  url: "../recipes/recipe_adaptable_filter_range.html"
+  link: "<a href='../recipes/recipe_adaptable_filter_range.html'>Changing a filter's range</a>"
+
+
+ 
+/recipes/recipe_adaptable_polling_source:
+  title: "Changing a polled source stream's period"
+  url: "../recipes/recipe_adaptable_polling_source.html"
+  link: "<a href='../recipes/recipe_adaptable_polling_source.html'>Changing a polled source stream's period</a>"
+
+
+ 
+/recipes/recipe_adaptable_deadtime_filter:
+  title: "Using an adaptable deadtime filter"
+  url: "../recipes/recipe_adaptable_deadtime_filter.html"
+  link: "<a href='../recipes/recipe_adaptable_deadtime_filter.html'>Using an adaptable deadtime filter</a>"
+
+
+ 
+/recipes/recipe_dynamic_analytic_control:
+  title: "Dynamically enabling analytic flows"
+  url: "../recipes/recipe_dynamic_analytic_control.html"
+  link: "<a href='../recipes/recipe_dynamic_analytic_control.html'>Dynamically enabling analytic flows</a>"
+
+
+ 
+/recipes/recipe_parallel_analytics:
+  title: "How can I run analytics on several tuples in parallel?"
+  url: "../recipes/recipe_parallel_analytics.html"
+  link: "<a href='../recipes/recipe_parallel_analytics.html'>How can I run analytics on several tuples in parallel?</a>"
+
+
+ 
+/recipes/recipe_concurrent_analytics:
+  title: "How can I run several analytics on a tuple concurrently?"
+  url: "../recipes/recipe_concurrent_analytics.html"
+  link: "<a href='../recipes/recipe_concurrent_analytics.html'>How can I run several analytics on a tuple concurrently?</a>"
+
+
+
+
+ 
+/docs/samples:
+  title: "Samples"
+  url: "../docs/samples.html"
+  link: "<a href='../docs/samples.html'>Samples</a>"
+
+
+ 
+/docs/quickstart:
+  title: "Quickstart IBM Watson IoT Platform"
+  url: "../docs/quickstart.html"
+  link: "<a href='../docs/quickstart.html'>Quickstart IBM Watson IoT Platform</a>"
+
+
+
+
+ 
+/docs/console:
+  title: "Using the console"
+  url: "../docs/console.html"
+  link: "<a href='../docs/console.html'>Using the console</a>"
+
+
+
+
+ 
+/docs/community:
+  title: "How to participate"
+  url: "../docs/community.html"
+  link: "<a href='../docs/community.html'>How to participate</a>"
+
+
+ 
+/docs/committers:
+  title: "Committers"
+  url: "../docs/committers.html"
+  link: "<a href='../docs/committers.html'>Committers</a>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+samples:
+  title: "Samples"
+  url: "..samples"
+  link: "<a href='..samples'>Samples</a>"
+
+
+
+faq:
+  title: "FAQ"
+  url: "..faq"
+  link: "<a href='..faq'>FAQ</a>"
+
+
+
+
+

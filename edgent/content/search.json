@@ -1,0 +1,322 @@
+[
+
+
+
+
+
+
+
+
+{
+"title": "Committers",
+"tags": "",
+"keywords": "",
+"url": "../docs/committers",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Common Quarks operations",
+"tags": "",
+"keywords": "",
+"url": "../docs/common-quarks-operations",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Apache Quarks community",
+"tags": "",
+"keywords": "",
+"url": "../docs/community",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Application console",
+"tags": "",
+"keywords": "",
+"url": "../docs/console",
+"summary": ""
+},
+
+
+
+
+{
+"title": "FAQ",
+"tags": "",
+"keywords": "",
+"url": "../docs/faq",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Introduction",
+"tags": "getting_started",
+"keywords": "",
+"url": "../docs/home",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Quarks",
+"tags": "",
+"keywords": "",
+"url": "../",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Overview",
+"tags": "",
+"keywords": "",
+"url": "../docs/overview",
+"summary": ""
+},
+
+
+
+
+
+
+
+{
+"title": "Getting started with Apache Quarks",
+"tags": "",
+"keywords": "",
+"url": "../docs/quarks-getting-started",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Apache Quarks documentation",
+"tags": "",
+"keywords": "",
+"url": "../docs/quarks_index",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Quickstart IBM Watson IoT Platform sample",
+"tags": "",
+"keywords": "",
+"url": "../docs/quickstart",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Using an adaptable deadtime filter",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_adaptable_deadtime_filter",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Changing a filter&#39;s range",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_adaptable_filter_range",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Changing a polled source stream&#39;s period",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_adaptable_polling_source",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Splitting a stream to apply different processing and combining the results into a single stream",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_combining_streams_processing_results",
+"summary": ""
+},
+
+
+
+
+{
+"title": "How can I run several analytics on a tuple concurrently?",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_concurrent_analytics",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Applying different processing against a single stream",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_different_processing_against_stream",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Dynamically Enabling Analytic Flows",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_dynamic_analytic_control",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Using an external configuration file for filter ranges",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_external_filter_range",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Hello Quarks!",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_hello_quarks",
+"summary": ""
+},
+
+
+
+
+{
+"title": "How can I run analytics on several tuples in parallel?",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_parallel_analytics",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Writing a source function",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_source_function",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Detecting a sensor value out of expected range",
+"tags": "",
+"keywords": "",
+"url": "../recipes/recipe_value_out_of_range",
+"summary": ""
+},
+
+
+
+
+{
+"title": "Sample programs",
+"tags": "",
+"keywords": "",
+"url": "../docs/samples",
+"summary": ""
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+null
+]
