@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Using an adaptable deadtime filter  | Apache Quarks Documentation</title>
+<link rel="stylesheet" type="text/css" href="../css/syntax.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="../js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="../js/toc.js"></script>
+<script src="../js/customscripts.js"></script>
+<link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="../docs/home.html">&nbsp;<span class="projectTitle"> Apache Quarks Documentation</span></a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+                <li class="dropdown">
+                    
+                    
+                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub Repos<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks" target="_blank">Source code</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks-website" target="_blank">Website/Documentation</a></li>
+                        
+                        
+                        
+                        
+
+                    </ul>
+                </li>
+                
+                
+
+
+                
+                
+                
+                
+                <li><a href="http://quarks.incubator.apache.org/javadoc/lastest/index.html" target="_blank">Javadoc</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+                    
+                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quarks Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks/releases" target="_blank">Download</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="samples">Samples</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="faq">FAQ</a></li>
+                        
+                        
+                        
+                        
+
+                    </ul>
+                </li>
+                
+                
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Apache Quarks Documentation feedback";
+var body = "I have some feedback about the Using an adaptable deadtime filter page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="mailto:dev@quarks.incubator.apache.org" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <!--uncomment this block if you want simple search instead of algolia-->
+                <li>
+                     <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="../js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        SimpleJekyllSearch.init({
+                            searchInput: document.getElementById('search-input'),
+                            resultsContainer: document.getElementById('results-container'),
+                            dataSource: '../search.json',
+                            searchResultTemplate: '<li><a href="{url}" title="Using an adaptable deadtime filter">{title}</a></li>',
+                        noResultsText: 'No results found.',
+                                limit: 10,
+                                fuzzy: true,
+                        })
+                    </script>
+                     <!--end search-->
+                </li>
+
+            
+        </div>
+        <!-- /.container -->
+</nav>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                // Initialize navgoco with default options
+                $("#mysidebar").navgoco({
+                    caretHtml: '',
+                    accordion: true,
+                    openClass: 'active', // open
+                    save: true,
+                    cookie: {
+                        name: 'navgoco',
+                        expires: false,
+                        path: '/'
+                    },
+                    slide: {
+                        duration: 400,
+                        easing: 'swing'
+                    }
+                });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+        <ul id="mysidebar" class="nav">
+
+            <span class="siteTagline">Quarks</span>
+            <span class="versionTagline">Version 0.3.0</span>
+
+            
+            
+            
+                
+            
+            <li><a href="#">Overview</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quarks_index.html">Introduction</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/faq.html">FAQ</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Get Started</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quarks-getting-started.html">Getting started guide</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/common-quarks-operations.html">Common operations</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Quarks Cookbook</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_hello_quarks.html">Hello Quarks!</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_source_function.html">Writing a source function</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_value_out_of_range.html">Detecting a sensor value out of expected range</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_different_processing_against_stream.html">Applying different processing against a single stream</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_combining_streams_processing_results.html">Splitting a stream to apply different processing and combining the results into a single stream</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_external_filter_range.html">Using an external configuration file for filter ranges</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_adaptable_filter_range.html">Changing a filter's range</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_adaptable_polling_source.html">Changing a polled source stream's period</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li class="active"><a href="../recipes/recipe_adaptable_deadtime_filter.html">Using an adaptable deadtime filter</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_dynamic_analytic_control.html">Dynamically enabling analytic flows</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_parallel_analytics.html">How can I run analytics on several tuples in parallel?</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_concurrent_analytics.html">How can I run several analytics on a tuple concurrently?</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Sample Programs</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/samples.html">Samples</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quickstart.html">Quickstart IBM Watson IoT Platform</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Using the Console</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/console.html">Using the console</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Get Involved</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/community.html">How to participate</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/committers.html">Committers</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+                
+
+
+                <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+				 <br/>
+			</li>
+		</ul>
+		<div class="row">
+		<div class="col-md-12">
+			
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+
+<div id="toc"></div>
+
+		</div>
+	</div>
+	</div>
+	
+    <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+                
+                <div class="post-header">
+   <h1 class="post-title-main">Using an adaptable deadtime filter</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+
+<div id="toc"></div>
+
+
+    
+
+    <a target="_blank" href="https://github.com/apache/incubator-quarks-website/blob/master/site/recipes/recipe_adaptable_deadtime_filter.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+  <p>Oftentimes, an application wants to control the frequency that continuously generated analytic results are made available to other parts of the application or published to other applications or an event hub.</p>
+
+<p>For example, an application polls an engine temperature sensor every second and performs various analytics on each reading &mdash; an analytic result is generated every second. By default, the application only wants to publish a (healthy) analytic result every 30 minutes. However, under certain conditions, the desire is to publish every per-second analytic result.</p>
+
+<p>Such a condition may be locally detected, such as detecting a sudden rise in the engine temperature or it may be as a result of receiving some external command to change the publishing frequency.</p>
+
+<p>Note this is a different case than simply changing the polling frequency for the sensor as doing that would disable local continuous monitoring and analysis of the engine temperature.</p>
+
+<p>This case needs a <em>deadtime filter</em> and Quarks provides one for your use! In contrast to a <em>deadband filter</em>, which skips tuples based on a deadband value range, a deadtime filter skips tuples based on a <em>deadtime period</em> following a tuple that is allowed to pass through. For example, if the deadtime period is 30 minutes, after allowing a tuple to pass, the filter skips any tuples received for the next 30 minutes. The next tuple received after that is allowed to pass through, and a new deadtime period is begun.</p>
+
+<p>See <code>quarks.analytics.sensors.Filters.deadtime()</code> (on <a href="https://github.com/apache/incubator-quarks/blob/master/analytics/sensors/src/main/java/quarks/analytics/sensors/Filters.java">GitHub</a>) and <code>quarks.analytics.sensors.Deadtime</code> (on <a href="https://github.com/apache/incubator-quarks/blob/master/analytics/sensors/src/main/java/quarks/analytics/sensors/Deadtime.java">GitHub</a>).</p>
+
+<p>This recipe demonstrates how to use an adaptable deadtime filter.</p>
+
+<p>A Quarks <code>IotProvider</code> ad <code>IoTDevice</code> with its command streams would be a natural way to control the application. In this recipe we will just simulate a &quot;set deadtime period&quot; command stream.</p>
+
+<h2 id="create-a-polled-sensor-readings-stream">Create a polled sensor readings stream</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Topology</span> <span class="n">top</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">SimulatedTemperatureSensor</span> <span class="n">tempSensor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimulatedTemperatureSensor</span><span class="o">();</span>
+<span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">engineTemp</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(</span><span class="n">tempSensor</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+                              <span class="o">.</span><span class="na">tag</span><span class="o">(</span><span class="s">"engineTemp"</span><span class="o">);</span>
+</code></pre></div>
+<p>It&#39;s also a good practice to add tags to streams to improve the usability of the development mode Quarks console.</p>
+
+<h2 id="create-a-deadtime-filtered-stream-mdash-initially-no-deadtime">Create a deadtime filtered stream&mdash;initially no deadtime</h2>
+
+<p>In this recipe we&#39;ll just filter the direct <code>engineTemp</code> sensor reading stream. In practice this filtering would be performed after some analytics stages and used as the input to <code>IotDevice.event()</code> or some other connector publish operation.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Deadtime</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">deadtime</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Deadtime</span><span class="o">&lt;&gt;();</span>
+<span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">deadtimeFilteredEngineTemp</span> <span class="o">=</span> <span class="n">engineTemp</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">deadtime</span><span class="o">)</span>
+                              <span class="o">.</span><span class="na">tag</span><span class="o">(</span><span class="s">"deadtimeFilteredEngineTemp"</span><span class="o">);</span>
+</code></pre></div>
+<h2 id="define-a-quot-set-deadtime-period-quot-method">Define a &quot;set deadtime period&quot; method</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">setDeadtimePeriod</span><span class="o">(</span><span class="n">Deadtime</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">deadtime</span><span class="o">,</span> <span class="kt">long</span> <span class="n">period</span><span class="o">,</span> <span class="n">TimeUnit</span> <span class="n">unit</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Setting deadtime period="</span><span class="o">+</span><span class="n">period</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">unit</span><span class="o">);</span>
+    <span class="n">deadtime</span><span class="o">.</span><span class="na">setPeriod</span><span class="o">(</span><span class="n">period</span><span class="o">,</span> <span class="n">unit</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="process-the-quot-set-deadtime-period-quot-command-stream">Process the &quot;set deadtime period&quot; command stream</h2>
+
+<p>Our commands are on the <code>TStream&lt;JsonObject&gt; cmds</code> stream. Each <code>JsonObject</code> tuple is a command with the properties &quot;period&quot; and &quot;unit&quot;.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">cmds</span><span class="o">.</span><span class="na">sink</span><span class="o">(</span><span class="n">json</span> <span class="o">-&gt;</span> <span class="n">setDeadtimePeriod</span><span class="o">(</span><span class="n">deadtimeFilteredEngineTemp</span><span class="o">,</span>
+    <span class="n">json</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"period"</span><span class="o">).</span><span class="na">getAsLong</span><span class="o">(),</span>
+    <span class="n">TimeUnit</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"unit"</span><span class="o">).</span><span class="na">getAsString</span><span class="o">())));</span>
+</code></pre></div>
+<h2 id="the-final-application">The final application</h2>
+
+<p>When the application is run it will initially print out temperature sensor readings every second for 15 seconds&mdash;the deadtime period is 0. Then every 15 seconds the application will toggle the deadtime period between 5 seconds and 0 seconds, resulting in a reduction in tuples being printed during the 5 second deadtime period.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.atomic.AtomicInteger</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">quarks.analytics.sensors.Deadtime</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.console.server.HttpServer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.providers.development.DevelopmentProvider</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.providers.direct.DirectProvider</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.samples.utils.sensor.SimulatedTemperatureSensor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.topology.TStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.topology.Topology</span><span class="o">;</span>
+
+<span class="cm">/**
+ * A recipe for using an Adaptable Deadtime Filter.
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdaptableDeadtimeFilterRecipe</span> <span class="o">{</span>
+
+    <span class="cm">/**
+     * Poll a temperature sensor to periodically obtain temperature readings.
+     * Create a "deadtime" filtered stream: after passing a tuple,
+     * any tuples received during the "deadtime" are filtered out.
+     * Then the next tuple is passed through and a new deadtime period begun.
+     *
+     * Respond to a simulated command stream to change the deadtime window
+     * duration.
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+
+        <span class="n">DirectProvider</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DevelopmentProvider</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"development console url: "</span>
+                <span class="o">+</span> <span class="n">dp</span><span class="o">.</span><span class="na">getServices</span><span class="o">().</span><span class="na">getService</span><span class="o">(</span><span class="n">HttpServer</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">getConsoleUrl</span><span class="o">());</span>
+
+        <span class="n">Topology</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="na">newTopology</span><span class="o">(</span><span class="s">"TemperatureSensor"</span><span class="o">);</span>
+
+        <span class="c1">// Generate a polled temperature sensor stream and set it alias</span>
+        <span class="n">SimulatedTemperatureSensor</span> <span class="n">tempSensor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimulatedTemperatureSensor</span><span class="o">();</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">engineTemp</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(</span><span class="n">tempSensor</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+                                      <span class="o">.</span><span class="na">tag</span><span class="o">(</span><span class="s">"engineTemp"</span><span class="o">);</span>
+
+        <span class="c1">// Filter out tuples during the specified "deadtime window"</span>
+        <span class="c1">// Initially no filtering.</span>
+        <span class="n">Deadtime</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">deadtime</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Deadtime</span><span class="o">&lt;&gt;();</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">deadtimeFilteredEngineTemp</span> <span class="o">=</span>
+                <span class="n">engineTemp</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">deadtime</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">tag</span><span class="o">(</span><span class="s">"deadtimeFilteredEngineTemp"</span><span class="o">);</span>
+
+        <span class="c1">// Report the time each temperature reading arrives and the value</span>
+        <span class="n">deadtimeFilteredEngineTemp</span><span class="o">.</span><span class="na">peek</span><span class="o">(</span><span class="n">tuple</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">new</span> <span class="n">Date</span><span class="o">()</span> <span class="o">+</span> <span class="s">" temp="</span> <span class="o">+</span> <span class="n">tuple</span><span class="o">));</span>
+
+        <span class="c1">// Generate a simulated "set deadtime period" command stream</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">JsonObject</span><span class="o">&gt;</span> <span class="n">cmds</span> <span class="o">=</span> <span class="n">simulatedSetDeadtimePeriodCmds</span><span class="o">(</span><span class="n">top</span><span class="o">);</span>
+
+        <span class="c1">// Process the commands to change the deadtime window period</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="na">sink</span><span class="o">(</span><span class="n">json</span> <span class="o">-&gt;</span> <span class="n">setDeadtimePeriod</span><span class="o">(</span><span class="n">deadtime</span><span class="o">,</span>
+            <span class="n">json</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"period"</span><span class="o">).</span><span class="na">getAsLong</span><span class="o">(),</span>
+            <span class="n">TimeUnit</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"unit"</span><span class="o">).</span><span class="na">getAsString</span><span class="o">())));</span>
+
+        <span class="n">dp</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="n">top</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">setDeadtimePeriod</span><span class="o">(</span><span class="n">Deadtime</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">deadtime</span><span class="o">,</span> <span class="kt">long</span> <span class="n">period</span><span class="o">,</span> <span class="n">TimeUnit</span> <span class="n">unit</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Setting deadtime period="</span><span class="o">+</span><span class="n">period</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">unit</span><span class="o">);</span>
+        <span class="n">deadtime</span><span class="o">.</span><span class="na">setPeriod</span><span class="o">(</span><span class="n">period</span><span class="o">,</span> <span class="n">unit</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="n">TStream</span><span class="o">&lt;</span><span class="n">JsonObject</span><span class="o">&gt;</span> <span class="n">simulatedSetDeadtimePeriodCmds</span><span class="o">(</span><span class="n">Topology</span> <span class="n">top</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">lastPeriod</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">JsonObject</span><span class="o">&gt;</span> <span class="n">cmds</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="c1">// don't change on first invocation</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">lastPeriod</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">lastPeriod</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+                    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+                <span class="o">}</span>
+                <span class="c1">// toggle between 0 and 5 sec deadtime period</span>
+                <span class="kt">int</span> <span class="n">newPeriod</span> <span class="o">=</span> <span class="n">lastPeriod</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="mi">5</span><span class="o">;</span>
+                <span class="n">lastPeriod</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">newPeriod</span><span class="o">);</span>
+                <span class="n">JsonObject</span> <span class="n">jo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JsonObject</span><span class="o">();</span>
+                <span class="n">jo</span><span class="o">.</span><span class="na">addProperty</span><span class="o">(</span><span class="s">"period"</span><span class="o">,</span> <span class="n">newPeriod</span><span class="o">);</span>
+                <span class="n">jo</span><span class="o">.</span><span class="na">addProperty</span><span class="o">(</span><span class="s">"unit"</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+                <span class="k">return</span> <span class="n">jo</span><span class="o">;</span>
+            <span class="o">},</span> <span class="mi">15</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">tag</span><span class="o">(</span><span class="s">"cmds"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">cmds</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+
+<div class="tags">
+    
+</div>
+
+<!-- 
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ -->
+
+</div>
+
+
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+
+             Site last
+            generated: Jun 3, 2016 <br/>
+
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="small">Apache Quarks is an effort undergoing Incubation at The Apache Software
+                Foundation (ASF), sponsored by the Incubator. Incubation is required of all newly accepted projects
+                until a further review indicates that the infrastructure, communications, and decision making process
+                have stabilized in a manner consistent with other successful ASF projects. While incubation status is
+                not necessarily a reflection of the completeness or stability of the code, it does indicate that the
+                project has yet to be fully endorsed by the ASF.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="small">Copyright © 2016 The Apache Software Foundation. Licensed under the Apache
+                License, Version 2.0.
+                Apache, the Apache Feather logo, and the Apache Incubator project logo are trademarks of The Apache
+                Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their
+                respective owners.</p>
+        </div>
+    </div>
+</footer>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+
+</html>
+

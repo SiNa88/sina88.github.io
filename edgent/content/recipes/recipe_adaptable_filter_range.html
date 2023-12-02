@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Changing a filter's range  | Apache Quarks Documentation</title>
+<link rel="stylesheet" type="text/css" href="../css/syntax.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="../js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="../js/toc.js"></script>
+<script src="../js/customscripts.js"></script>
+<link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="../docs/home.html">&nbsp;<span class="projectTitle"> Apache Quarks Documentation</span></a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+                <li class="dropdown">
+                    
+                    
+                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub Repos<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks" target="_blank">Source code</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks-website" target="_blank">Website/Documentation</a></li>
+                        
+                        
+                        
+                        
+
+                    </ul>
+                </li>
+                
+                
+
+
+                
+                
+                
+                
+                <li><a href="http://quarks.incubator.apache.org/javadoc/lastest/index.html" target="_blank">Javadoc</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+                    
+                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quarks Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        
+                        <li><a href="https://github.com/apache/incubator-quarks/releases" target="_blank">Download</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="samples">Samples</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="faq">FAQ</a></li>
+                        
+                        
+                        
+                        
+
+                    </ul>
+                </li>
+                
+                
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Apache Quarks Documentation feedback";
+var body = "I have some feedback about the Changing a filter's range page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="mailto:dev@quarks.incubator.apache.org" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <!--uncomment this block if you want simple search instead of algolia-->
+                <li>
+                     <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="../js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        SimpleJekyllSearch.init({
+                            searchInput: document.getElementById('search-input'),
+                            resultsContainer: document.getElementById('results-container'),
+                            dataSource: '../search.json',
+                            searchResultTemplate: '<li><a href="{url}" title="Changing a filter\s range">{title}</a></li>',
+                        noResultsText: 'No results found.',
+                                limit: 10,
+                                fuzzy: true,
+                        })
+                    </script>
+                     <!--end search-->
+                </li>
+
+            
+        </div>
+        <!-- /.container -->
+</nav>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                // Initialize navgoco with default options
+                $("#mysidebar").navgoco({
+                    caretHtml: '',
+                    accordion: true,
+                    openClass: 'active', // open
+                    save: true,
+                    cookie: {
+                        name: 'navgoco',
+                        expires: false,
+                        path: '/'
+                    },
+                    slide: {
+                        duration: 400,
+                        easing: 'swing'
+                    }
+                });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+        <ul id="mysidebar" class="nav">
+
+            <span class="siteTagline">Quarks</span>
+            <span class="versionTagline">Version 0.3.0</span>
+
+            
+            
+            
+                
+            
+            <li><a href="#">Overview</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quarks_index.html">Introduction</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/faq.html">FAQ</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Get Started</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quarks-getting-started.html">Getting started guide</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/common-quarks-operations.html">Common operations</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Quarks Cookbook</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_hello_quarks.html">Hello Quarks!</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_source_function.html">Writing a source function</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_value_out_of_range.html">Detecting a sensor value out of expected range</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_different_processing_against_stream.html">Applying different processing against a single stream</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_combining_streams_processing_results.html">Splitting a stream to apply different processing and combining the results into a single stream</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_external_filter_range.html">Using an external configuration file for filter ranges</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li class="active"><a href="../recipes/recipe_adaptable_filter_range.html">Changing a filter's range</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_adaptable_polling_source.html">Changing a polled source stream's period</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_adaptable_deadtime_filter.html">Using an adaptable deadtime filter</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_dynamic_analytic_control.html">Dynamically enabling analytic flows</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_parallel_analytics.html">How can I run analytics on several tuples in parallel?</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../recipes/recipe_concurrent_analytics.html">How can I run several analytics on a tuple concurrently?</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Sample Programs</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/samples.html">Samples</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/quickstart.html">Quickstart IBM Watson IoT Platform</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Using the Console</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/console.html">Using the console</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+            
+            <li><a href="#">Get Involved</a>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/community.html">How to participate</a></li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="../docs/committers.html">Committers</a></li>
+                    
+
+                    
+
+                    
+                    
+                </ul>
+                
+                
+                
+
+
+                <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+				 <br/>
+			</li>
+		</ul>
+		<div class="row">
+		<div class="col-md-12">
+			
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+
+<div id="toc"></div>
+
+		</div>
+	</div>
+	</div>
+	
+    <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+                
+                <div class="post-header">
+   <h1 class="post-title-main">Changing a filter's range</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+
+<div id="toc"></div>
+
+
+    
+
+    <a target="_blank" href="https://github.com/apache/incubator-quarks-website/blob/master/site/recipes/recipe_adaptable_filter_range.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+  <p>The <a href="recipe_value_out_of_range.html">Detecting a sensor value out of range</a> recipe introduced the basics of filtering as well as the use of a <a href="http://quarks.incubator.apache.org/javadoc/lastest//lastest/quarks/analytics/sensors/Range.html">Range</a>.</p>
+
+<p>Oftentimes, a user wants a filter&#39;s behavior to be adaptable rather than static. A filter&#39;s range can be made changeable via commands from some external source or just changed as a result of some other local analytics.</p>
+
+<p>A Quarks <code>IotProvider</code> and <code>IoTDevice</code> with its command streams would be a natural way to control the application. In this recipe we will just simulate a &quot;set optimal temp range&quot; command stream.</p>
+
+<p>The string form of a <code>Range</code> is natural, consise, and easy to use. As such it&#39;s a convenient form to use as external range format. The range string can easily be converted back into a <code>Range</code>.</p>
+
+<p>We&#39;re going to assume familiarity with that earlier recipe and those concepts and focus on just the &quot;adaptable range specification&quot; aspect of this recipe.</p>
+
+<h2 id="define-the-range">Define the range</h2>
+
+<p>A <code>java.util.concurrent.atomic.AtomicReference</code> is used to provide the necessary thread synchronization.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">DEFAULT_TEMP_RANGE</span> <span class="o">=</span> <span class="n">Ranges</span><span class="o">.</span><span class="na">valueOfDouble</span><span class="o">(</span><span class="s">"[77.0..91.0]"</span><span class="o">);</span>
+<span class="kd">static</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;&gt;</span> <span class="n">optimalTempRangeRef</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;(</span><span class="n">DEFAULT_TEMP_RANGE</span><span class="o">);</span>
+</code></pre></div>
+<h2 id="define-a-method-to-change-the-range">Define a method to change the range</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOptimalTempRange</span><span class="p">(</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">range</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Using optimal temperature range: "</span> <span class="o">+</span> <span class="n">range</span><span class="o">);</span>
+    <span class="n">optimalTempRangeRef</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">range</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>The filter just uses <code>optimalTempRangeRef.get()</code> to use the current range setting.</p>
+
+<h2 id="simulate-a-command-stream">Simulate a command stream</h2>
+
+<p>A <code>TStream&lt;Range&lt;Double&gt;&gt; setRangeCmds</code> stream is created and a new range specification tuple is generated every 10 seconds.  A <code>sink()</code> on the stream calls <code>setOptimalTempRange()</code> to change the range and hence the filter&#39;s bahavior.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Simulate a command stream to change the optimal range.</span>
+<span class="c1">// Such a stream might be from an IotDevice command.</span>
+<span class="n">String</span><span class="o">[]</span> <span class="n">ranges</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="o">{</span>
+    <span class="s">"[70.0..120.0]"</span><span class="o">,</span> <span class="s">"[80.0..130.0]"</span><span class="o">,</span> <span class="s">"[90.0..140.0]"</span><span class="o">,</span>
+<span class="o">};</span>
+<span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">TStream</span><span class="o">&lt;</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;&gt;</span> <span class="n">setRangeCmds</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(()</span>
+        <span class="o">-&gt;</span> <span class="n">Ranges</span><span class="o">.</span><span class="na">valueOfDouble</span><span class="o">(</span><span class="n">ranges</span><span class="o">[</span><span class="n">count</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">()</span> <span class="o">%</span> <span class="n">ranges</span><span class="o">.</span><span class="na">length</span><span class="o">]),</span>
+        <span class="mi">10</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+
+<span class="n">setRangeCmds</span><span class="o">.</span><span class="na">sink</span><span class="o">(</span><span class="n">tuple</span> <span class="o">-&gt;</span> <span class="n">setOptimalTempRange</span><span class="o">(</span><span class="n">tuple</span><span class="o">));</span>
+</code></pre></div>
+<h2 id="the-final-application">The final application</h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.atomic.AtomicInteger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.atomic.AtomicReference</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">quarks.analytics.sensors.Range</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.analytics.sensors.Ranges</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.providers.direct.DirectProvider</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.samples.utils.sensor.SimulatedTemperatureSensor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.topology.TStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">quarks.topology.Topology</span><span class="o">;</span>
+
+<span class="cm">/**
+ * Detect a sensor value out of expected range.
+ * Simulate an adaptable range changed by external commands.
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdaptableFilterRange</span> <span class="o">{</span>
+    <span class="cm">/**
+     * Optimal temperatures (in Fahrenheit)
+     */</span>
+    <span class="kd">static</span> <span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">DEFAULT_TEMP_RANGE</span> <span class="o">=</span> <span class="n">Ranges</span><span class="o">.</span><span class="na">valueOfDouble</span><span class="o">(</span><span class="s">"[77.0..91.0]"</span><span class="o">);</span>
+    <span class="kd">static</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;&gt;</span> <span class="n">optimalTempRangeRef</span> <span class="o">=</span>
+            <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;(</span><span class="n">DEFAULT_TEMP_RANGE</span><span class="o">);</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="n">setOptimalTempRange</span><span class="o">(</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">range</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Using optimal temperature range: "</span> <span class="o">+</span> <span class="n">range</span><span class="o">);</span>
+        <span class="n">optimalTempRangeRef</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">range</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Polls a simulated temperature sensor to periodically obtain
+     * temperature readings (in Fahrenheit). Use a simple filter
+     * to determine when the temperature is out of the optimal range.
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+
+        <span class="n">DirectProvider</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DirectProvider</span><span class="o">();</span>
+
+        <span class="n">Topology</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="na">newTopology</span><span class="o">(</span><span class="s">"TemperatureSensor"</span><span class="o">);</span>
+
+        <span class="c1">// Generate a stream of temperature sensor readings</span>
+        <span class="n">SimulatedTemperatureSensor</span> <span class="n">tempSensor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimulatedTemperatureSensor</span><span class="o">();</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(</span><span class="n">tempSensor</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+
+        <span class="c1">// Simple filter: Perform analytics on sensor readings to detect when</span>
+        <span class="c1">// the temperature is out of the optimal range and generate warnings</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">simpleFiltered</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">tuple</span> <span class="o">-&gt;</span>
+                <span class="o">!</span><span class="n">optimalTempRangeRef</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">contains</span><span class="o">(</span><span class="n">tuple</span><span class="o">));</span>
+        <span class="n">simpleFiltered</span><span class="o">.</span><span class="na">sink</span><span class="o">(</span><span class="n">tuple</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Temperature is out of range! "</span>
+                <span class="o">+</span> <span class="s">"It is "</span> <span class="o">+</span> <span class="n">tuple</span> <span class="o">+</span> <span class="s">"\u00b0F!"</span><span class="o">));</span>
+
+        <span class="c1">// See what the temperatures look like</span>
+        <span class="n">temp</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+
+        <span class="c1">// Simulate a command stream to change the optimal range.</span>
+        <span class="c1">// Such a stream might be from an IotDevice command.</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">ranges</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="o">{</span>
+            <span class="s">"[70.0..120.0]"</span><span class="o">,</span> <span class="s">"[80.0..130.0]"</span><span class="o">,</span> <span class="s">"[90.0..140.0]"</span><span class="o">,</span>
+        <span class="o">};</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+        <span class="n">TStream</span><span class="o">&lt;</span><span class="n">Range</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;&gt;</span> <span class="n">setRangeCmds</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="na">poll</span><span class="o">(</span>
+                <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">Ranges</span><span class="o">.</span><span class="na">valueOfDouble</span><span class="o">(</span><span class="n">ranges</span><span class="o">[</span><span class="n">count</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">()</span> <span class="o">%</span> <span class="n">ranges</span><span class="o">.</span><span class="na">length</span><span class="o">]),</span>
+                <span class="mi">10</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+
+        <span class="n">setRangeCmds</span><span class="o">.</span><span class="na">sink</span><span class="o">(</span><span class="n">tuple</span> <span class="o">-&gt;</span> <span class="n">setOptimalTempRange</span><span class="o">(</span><span class="n">tuple</span><span class="o">));</span>
+
+        <span class="n">dp</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="n">top</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<div class="tags">
+    
+</div>
+
+<!-- 
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ -->
+
+</div>
+
+
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 footer">
+
+             Site last
+            generated: Jun 3, 2016 <br/>
+
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="small">Apache Quarks is an effort undergoing Incubation at The Apache Software
+                Foundation (ASF), sponsored by the Incubator. Incubation is required of all newly accepted projects
+                until a further review indicates that the infrastructure, communications, and decision making process
+                have stabilized in a manner consistent with other successful ASF projects. While incubation status is
+                not necessarily a reflection of the completeness or stability of the code, it does indicate that the
+                project has yet to be fully endorsed by the ASF.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="small">Copyright © 2016 The Apache Software Foundation. Licensed under the Apache
+                License, Version 2.0.
+                Apache, the Apache Feather logo, and the Apache Incubator project logo are trademarks of The Apache
+                Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their
+                respective owners.</p>
+        </div>
+    </div>
+</footer>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+
+</html>
+
