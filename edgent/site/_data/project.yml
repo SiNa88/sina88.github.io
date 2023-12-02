@@ -1,0 +1,58 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to you under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#
+# Edgent Project configurations
+#
+name: Apache Edgent
+short_name: Edgent
+unix_name: edgent
+incubator_name: incubator-edgent
+incubator_slash_name: incubator/edgent
+description: Apache Edgent is a community for accelerating analytics in edge devices. 
+
+download: downloads
+
+dev_list: dev@edgent.incubator.apache.org
+dev_list_subscribe: dev-subscribe@edgent.incubator.apache.org
+dev_list_unsubscribe: dev-unsubscribe@edgent.incubator.apache.org
+dev_list_archive: http://mail-archives.apache.org/mod_mbox/incubator-edgent-dev/
+dev_list_archive_mailarchive: https://www.mail-archive.com/dev@edgent.apache.org/
+dev_list_archive_markmail:
+
+user_list:
+user_list_subscribe:
+user_list_unsubscribe:
+user_list_archive:
+user_list_archive_mailarchive:
+user_list_archive_markmail:
+
+commits_list: commits@edgent.incubator.apache.org
+commits_list_subscribe: commits-subscribe@edgent.incubator.apache.org
+commits_list_unsubscribe: commits-unsubscribe@edgent.incubator.apache.org
+commits_list_archive: http://mail-archives.apache.org/mod_mbox/incubator-edgent-commits/
+commits_list_archive_mailarchive: https://www.mail-archive.com/commits@edgent.apache.org/
+commits_list_archive_markmail:
+
+jira: EDGENT
+
+source_repository: https://git-wip-us.apache.org/repos/asf/incubator-edgent.git
+source_repository_mirror: https://github.com/apache/incubator-edgent
+apache_release_location: https://www.apache.org/dist/release/incubator/edgent
+
+website_repository: https://git-wip-us.apache.org/repos/asf/incubator-edgent-website.git
+website_repository_mirror: https://github.com/apache/incubator-edgent-website
+
+podling: true
