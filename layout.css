@@ -26,7 +26,7 @@ text-align:justify;
 #picture img{width:200px;height:auto;}
 
 header {
-background: #ffffff url("http://www.itec.aau.at/~roland/siegel-aau-opac12.png") no-repeat;
+background: #ffffff url("") no-repeat;
 background-position:25% -170px;
 background-size: 700px; -ms-background-size: 700px; -o-background-size: 700px; -moz-background-size: 700px; -webkit-background-size: 700px;
 box-shadow: 0px 2px 0px #7ea4cb;
@@ -67,7 +67,7 @@ box-shadow: 0px -1px 0px #9b9b9b;
 position:relative;
 width:100%;
 color:#5c7788;
-background: #ffffff url("http://www.itec.aau.at/~roland/siegel-aau-opac12.png") no-repeat;
+background: #ffffff url("") no-repeat;
 background-position:25% -150px;
 background-size: 700px; -ms-background-size: 700px; -o-background-size: 700px; -moz-background-size: 700px; -webkit-background-size: 700px;
 text-align:left;
