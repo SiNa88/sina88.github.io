@@ -13,6 +13,18 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://sina88.github.io/layout.css">
 		<script>
+		function myResProj() {
+		  var x = document.getElementById("my_resproj");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		</script>
+
+		
+		<script>
 		function myFunction0() {
 		  var x = document.getElementById("my_teaching");
 		  if (x.style.display === "none") {
@@ -171,7 +183,8 @@
 
 		</ul>
 		<hr>
-		<h2><a href="https://sina88.github.io/#research_projects">Research projects</a></h2>
+		<h2><a href="https://sina88.github.io/#research_projects">Research projects</a><button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj()">SHOW / HIDE</button> </h2> 
+		<div id="my_resproj" style="display: none;">
 		<ul>
 			<li><a href="https://www.plus.ac.at/digital-and-analytical-sciences/fachbereiche-einrichtungen/einrichtungen/exdigit/?lang=en">EXDIGIT</a></li>
 				<ul>
@@ -231,6 +244,7 @@
 					<li><a href="https://datacloudproject.eu/back-office/uploads/Data_Cloud_D5_1_FINAL_85bce3b422.pdf">Deliverable - 5.1</a>: Data-aware resource provisioning across the computing continuum.</li>
 				</ul>
 		</ul>
+		</div>
 		<hr>
 		<h2><a href="https://sina88.github.io/#teaching">Teaching</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myFunction0()">SHOW / HIDE</button> </h2> 
 		<div id="my_teaching" style="display: none;">
