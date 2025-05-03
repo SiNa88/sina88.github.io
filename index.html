@@ -23,6 +23,50 @@
 		}
 		</script>
 
+		<script>
+		function myResProj_ExDigit() {
+		  var x = document.getElementById("my_resproj_exdigit");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		</script>
+
+		<script>
+		function myResProj_DC() {
+		  var x = document.getElementById("my_resproj_dc");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		</script>
+
+		<script>
+		function myResProj_kaerfog() {
+		  var x = document.getElementById("my_resproj_kaerfog");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		</script>
+
+		<script>
+		function myResProj_gaia() {
+		  var x = document.getElementById("my_resproj_gaia");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		</script>
+
 		
 		<script>
 		function myTeachingFunction() {
@@ -189,7 +233,8 @@
 		<hr>
 		<h2><a href="https://sina88.github.io/#research_projects">Research projects</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj()">SHOW / HIDE</button> </h2> 
 		<div id="my_resproj" style="display: none;">
-		<ul>
+		<h3><a href="https://sina88.github.io/#research_projects_exdigit">ExDigit</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj_ExDigit()">SHOW / HIDE</button> </h3> 
+		<div id="my_resproj_exdigit" style="display: none;">
 			<li><a href="https://www.plus.ac.at/digital-and-analytical-sciences/fachbereiche-einrichtungen/einrichtungen/exdigit/?lang=en">EXDIGIT</a></li>
 				<ul>
 					<li>A preprint of our paper named <a href="https://arxiv.org/abs/2504.08741">DEEP</a> is available on Arxiv.</li>
@@ -211,12 +256,18 @@
 					<li>Exploring the digitalization of Smart Grid: [<a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=10800307069852729867">Ref-1</a>, <a href="https://scholar.google.com/scholar?cluster=13768399858538468801&hl=en&as_sdt=2005&sciodt=0,5">Ref-2</a>]</li>
 					<li>Plenary meeting of the exdigit cooperators for interdisciplinary research: [<a href="https://www.salzburgresearch.at/2024/kooperation-fuer-interdisziplinaere-forschung-in-salzburg/">Event</a>].</li>
 				</ul>
+			</div>
+			<h3><a href="https://sina88.github.io/#research_projects_gaia">GAIA</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj_ExDigit()">SHOW / HIDE</button> </h3> 
+			<div id="my_resproj_gaia" style="display: none;">
 			<li><a href="https://athena.itec.aau.at/gaia">GAIA</a></li>
 				<ul>
 					<li>Contributing to devising a scheduling model for green video encoding services in the Cloud and Edge computing; [<a href="https://dl.acm.org/doi/10.1145/3593908.3593943">1st-Paper</a>], [<a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+Survey+on+Energy+Consumption+and+Environmental+Impact+of+Video+Streaming&btnG=">2nd-Paper</a>].</li>
 					<li>On 21st of November 2023, AAU held a workshop at <a href="https://bitmovin.com/research/gaia/">Bitmovin</a>; [<a href="https://itec.aau.at/successful-collaboration-with-bitmovin-team-in-apac/">Event</a>].</li>
 				
 				</ul>
+			</div>
+			<h3><a href="https://sina88.github.io/#research_projects_kaerfog">KaerntnerFog</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj_ExDigit()">SHOW / HIDE</button> </h3> 
+			<div id="my_resproj_kaerfog" style="display: none;">
 			<li><a href="https://projekte.ffg.at/projekt/4163252">KaerntnerFog</a></li>
 				<ul>
 					<li>In March 2024, I contributed to the second deliverable for microservices orchestration of Smart-City and Virtual-Reality use cases.</li>
@@ -230,6 +281,9 @@
 						<li>Virtual reality use case, designed by Selina Isak, focuses on a 360-degree video streaming framework.</li>
 					</ul>
 				</ul>
+			</div>
+			<h3><a href="https://sina88.github.io/#research_projects_DC">DataCloud</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myResProj_ExDigit()">SHOW / HIDE</button> </h3> 
+			<div id="my_resproj_DC" style="display: none;">
 			<li><a href="https://www.youtube.com/@datacloudproject8370/videos">DataCloud</a></li>
 				<ul>
 					<li>On <a href="https://sina88.github.io/presentations/Demo-datacloud.png">25th Jun. 2024</a>, we presented the final demo of DataCloud to the EU project officer and reviewers. </li>
@@ -258,7 +312,7 @@
 					<li><a href="https://datacloudproject.eu/back-office/uploads/Data_Cloud_D5_3_FINAL_cd13635ba6.pdf">Deliverable - 5.3</a>: Event-detection and infrastructure and deployment adaptation.</li>
 					<li><a href="https://datacloudproject.eu/back-office/uploads/Data_Cloud_D5_1_FINAL_85bce3b422.pdf">Deliverable - 5.1</a>: Data-aware resource provisioning across the computing continuum.</li>
 				</ul>
-		</ul>
+			</div>
 		</div>
 		<hr>
 		<h2><a href="https://sina88.github.io/#teaching">Teaching</a> <button style = "color:#fff;border: none;border-radius:15px;box-shadow:09px#999;background-color:#5ccafc" onclick="myTeachingFunction()">SHOW / HIDE</button> </h2> 
