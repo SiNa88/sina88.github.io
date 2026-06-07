@@ -19,6 +19,8 @@ limitations under the License.
 
 # Apache Edgent website
 
+https://sina88.github.io/edgent/content/docs/home.html
+
 ## Location
 
 http://edgent.incubator.apache.org/
