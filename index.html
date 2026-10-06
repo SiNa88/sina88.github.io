@@ -55,26 +55,28 @@
 		  }
 		}
 		</script>
-
 		<script>
-		function myResProj_gaia() {
-		  var x = document.getElementById("research_projects_gaia");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
+		function openLinkedSection() {
+		    if (window.location.hash === "#research_projects_gaia") {
+		      const section = document.getElementById("research_projects_gaia");
+		      if (section) {
+		        section.style.display = "block";
+		        section.scrollIntoView({ behavior: "smooth", block: "start" });
+		      }
+		    }
 		  }
-		}
+		
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);		
 		</script>
-
 		<script>
-		function myTeachingFunction() {
-		  var x = document.getElementById("teaching");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+		function openLinkedSection() {
+		    if (window.location.hash === "teaching") {
+		  		const section = document.getElementById("teaching");
+				if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+		      }
 		}
 		</script>
 		
