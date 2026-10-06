@@ -12,7 +12,21 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://sina88.github.io/layout.css">
-		
+
+		<script>
+		function myAboutMe() {
+			if (window.location.hash === "#about_me") {
+			  const section = document.getElementById("about_me");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		}
+		window.addEventListener("DOMContentLoaded", myAboutMe);
+		window.addEventListener("hashchange", myAboutMe);	
+		</script>
+
 		<script>
 		function myResProj() {
 			if (window.location.hash === "#research_projects") {
