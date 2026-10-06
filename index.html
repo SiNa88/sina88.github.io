@@ -14,49 +14,61 @@
 		<link rel="stylesheet" type="text/css" href="https://sina88.github.io/layout.css">
 		<script>
 		function myResProj() {
-		  var x = document.getElementById("research_projects");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#research_projects") {
+			  const section = document.getElementById("research_projects");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 
 		<script>
 		function myResProj_ExDigit() {
-		  var x = document.getElementById("research_projects_exdigit");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#research_projects_exdigit") {
+			  const section = document.getElementById("research_projects_exdigit");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 
 		<script>
 		function myResProj_datacloud() {
-		  var x = document.getElementById("research_projects_datacloud");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#teaching") {
+			  const section = document.getElementById("research_projects_datacloud");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 
 		<script>
 		function myResProj_kaerfog() {
-		  var x = document.getElementById("research_projects_kaerfog");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#research_projects_kaerfog") {
+			  const section = document.getElementById("research_projects_kaerfog");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		<script>
-		function openLinkedSection() {
+		function myResProj_gaia() {
 		    if (window.location.hash === "#research_projects_gaia") {
 		      const section = document.getElementById("research_projects_gaia");
 		      if (section) {
@@ -65,106 +77,130 @@
 		      }
 		    }
 		  }
-		
 		  window.addEventListener("DOMContentLoaded", openLinkedSection);
 		  window.addEventListener("hashchange", openLinkedSection);		
 		</script>
 		<script>
-		function openLinkedSection() {
-		    if (window.location.hash === "teaching") {
+		function myTeachingFunction() {
+		    if (window.location.hash === "#teaching") {
 		  		const section = document.getElementById("teaching");
 				if (section) {
 			        section.style.display = "block";
 			        section.scrollIntoView({ behavior: "smooth", block: "start" });
 		      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
-		
 		<script>
 		function myPublicFunction() {
-		  var x = document.getElementById("publications");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+		    if (window.location.hash === "#publications") {
+			  const section = document.getElementById("publications");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+		      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
-		
 		<script>
 		function myPublicJournalFunction() {
-		  var x = document.getElementById("publications_journals");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#publications_journals") {
+		  	const section = document.getElementById("publications_journals");
+		  	if (section) {
+		        section.style.display = "block";
+		        section.scrollIntoView({ behavior: "smooth", block: "start" });
+		      }
+			}
+			window.addEventListener("DOMContentLoaded", openLinkedSection);
+			window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myPublicConfFunction() {
-		  var x = document.getElementById("publications_conferences");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#publications_conferences") {
+			  const section = document.getElementById("publications_conferences");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myPublicWorkFunction() {
-		  var x = document.getElementById("publications_workshops");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#publications_workshops") {
+			  const section = document.getElementById("publications_workshops");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myPublicDSFunction() {
-		  var x = document.getElementById("publications_datasets");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#publications_datasets") {
+			  const section = document.getElementById("publications_datasets");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myReviewFunction() {
-		  var x = document.getElementById("reviews");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#reviews") {
+			  const section = document.getElementById("reviews");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myPCRevFunction() {
-		  var x = document.getElementById("pc_membership");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#pc_membership") {
+			  const section = document.getElementById("pc_membership");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 		
 		<script>
 		function myAwrdFunction() {
-		  var x = document.getElementById("awards");
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
+			if (window.location.hash === "#awards") {
+			  const section = document.getElementById("awards");
+			  if (section) {
+			        section.style.display = "block";
+			        section.scrollIntoView({ behavior: "smooth", block: "start" });
+			      }
+			}
+		  window.addEventListener("DOMContentLoaded", openLinkedSection);
+		  window.addEventListener("hashchange", openLinkedSection);	
 		}
 		</script>
 	</head>
