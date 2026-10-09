@@ -124,19 +124,23 @@
 		window.addEventListener("DOMContentLoaded", myPublicFunction);
 		window.addEventListener("hashchange", myPublicFunction);
 		</script>
-		
 		<script>
-		function myPublicJournalFunction() {
-			if (window.location.hash === "#publications_journals") {
-			  	const section = document.getElementById("publications_journals");
-			  	if (section) {
-			        section.style.display = "block";
-			        section.scrollIntoView({ behavior: "smooth", block: "start" });
-			      }
+			function myPublicJournalFunction() {
+				if (window.location.hash !== "#publications_journals") return;
+				const publications = document.getElementById("publications");
+				const journals = document.getElementById("publications_journals");
+				if (publications && journals) {
+					publications.style.display = "block";
+					journals.style.display = "block";
+					
+					journals.scrollIntoView({
+				        behavior: "smooth",
+				        block: "start"
+					});
+				}
 			}
 			window.addEventListener("DOMContentLoaded", myPublicJournalFunction);
-			window.addEventListener("hashchange", myPublicJournalFunction);	
-		}
+			window.addEventListener("hashchange", myPublicJournalFunction);
 		</script>
 		
 		<script>
